@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Question Board</title>
 </head>
-<body class="bg-pink-100 max-w-7xl mx-auto p-4 ">
+<body class="bg-gray-400 max-w-7xl mx-auto p-4 ">
     <header>
         <nav>
             <div class="flex justify-between py-4 px-6  text-xl bg-[#FFFFFF] mt-4">  
@@ -19,10 +19,10 @@
                     <h1>Dev Board</h1>
                 </div>
                 <div class="flex items-center space-x-6 shadow-lg">
-                    <button class="bg-[#154eec] text-[#FFFFFF] flex justify-center items-center py-2 px-4  rounded-lg">
-                        <a href="http://127.0.0.1:5500/index.html" class="theme-change">
+                    <button id="questions-html" class="bg-[#154eec] text-[#FFFFFF] flex justify-center items-center py-2 px-4  rounded-lg">
+                         
                              Back To Desk
-                        </a>
+                        
                     </button>
                 </div>
             </div>
@@ -124,22 +124,9 @@
 
 </footer>
 
-<div id="include-html"></div>
+<script src="script/layout.js"></script>
+<script src="script/scripits.js"></script>
 
-<script>
-    async function loadHTML(url, elementId) {
-        try {
-            const response = await fetch(url); // HTML ফাইল লোড করা হচ্ছে
-            const content = await response.text(); // টেক্সট আকারে কনটেন্ট নেওয়া হচ্ছে
-            document.getElementById(elementId).innerHTML = content; // পেজে দেখানো হচ্ছে
-        } catch (error) {
-            console.error("HTML লোড করতে সমস্যা হয়েছে:", error);
-        }
-    }
-
-    // "page.html" ফাইলটি লোড করবো
-    loadHTML('page.html', 'include-html');
-</script>
 
 </body>
 </html>

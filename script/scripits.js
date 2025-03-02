@@ -100,8 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
         mainTextBox.style.display = "none";
       });
     }
+    const newDate = new Date().toDateString();
+    document.getElementById('present-day').innerHTML = newDate.slice(0, 3);
+    document.getElementById('present-month').innerHTML = newDate.slice(3);
   });
 
-document.getElementById('back-home').addEventListener('click', function () {
-    window.location.href = "question.html"
-})
+  document.getElementById("questions-html").addEventListener("click", function(){
+    window.location.href = "index.html"
+  });
+
