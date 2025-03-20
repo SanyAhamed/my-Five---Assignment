@@ -106,6 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("questions-html").addEventListener("click", function(){
-    window.location.href = "index.html"
+    window.location.href = "questions.html"
   });
 
